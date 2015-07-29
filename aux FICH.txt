@@ -1,0 +1,3 @@
+for FICH in `ls *.txt`; do echo -n "$FICH: "; for VAR in {1..30}; do ./main.exe < $FICH | grep "nano"; done |  awk '{var+=$4} END{print var/NR}'; done
+
+for VAR in {1..30}; do ./main.exe <i10.txt | grep "nano"; done |  awk '{var+=$4} END {print var/NR}'
